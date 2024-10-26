@@ -1360,3 +1360,5 @@ Text_TestMsg::
 	.include "data/text/save.inc"
 	.include "data/text/new_game_intro.inc"
 	.include "data/text/pokedude.inc"
+	.include "data/scripts/seasons.inc"
+	.include "data/text/seasons.inc"

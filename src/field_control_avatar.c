@@ -21,6 +21,7 @@
 #include "quest_log.h"
 #include "safari_zone.h"
 #include "script.h"
+#include "seasons.h"
 #include "start_menu.h"
 #include "trainer_see.h"
 #include "vs_seeker.h"
@@ -673,6 +674,9 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
             ScriptContext_SetupScript(EventScript_EggHatch);
             return TRUE;
         }
+	else if (UpdateSeasonStepCounter() == TRUE) {
+            ScriptContext_SetupScript(EventScript_NewSeason);
+	}
     }
     if (SafariZoneTakeStep() == TRUE)
         return TRUE;
