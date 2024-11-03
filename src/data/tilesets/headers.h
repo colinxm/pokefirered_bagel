@@ -9,7 +9,28 @@ const struct Tileset gTileset_General =
     .callback = InitTilesetAnim_General,
 };
 
+const struct Tileset gTileset_General_Winter =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General_Winter,
+    .palettes = gTilesetPalettes_General,
+    .metatiles = gMetatiles_General_Winter,
+    .metatileAttributes = gMetatileAttributes_General,
+    .callback = InitTilesetAnim_General,
+};
+
 const struct Tileset gTileset_PalletTown =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PalletTown,
+    .palettes = gTilesetPalettes_PalletTown,
+    .metatiles = gMetatiles_PalletTown,
+    .metatileAttributes = gMetatileAttributes_PalletTown,
+    .callback = NULL,
+};
+const struct Tileset gTileset_PalletTown_Winter =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,

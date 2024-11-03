@@ -5,6 +5,11 @@
 
 #define SEASON_STEP_THRESHOLD 20///TODO: make this a reasonable number
 
+u8 getCurSeason (void) {
+	u8 curSeason = VarGet(VAR_SEASON);
+	return curSeason;
+}
+
 static u8 nextSeason (u8 curSeason) {
 	switch (curSeason) {
 		case SEASON_SUMMER: return SEASON_FALL;

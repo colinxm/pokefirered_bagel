@@ -100,7 +100,7 @@ string generate_map_header_text(Json map_data, Json layouts_data) {
     string map_layout_id = json_to_string(map_data, "layout");
 
     vector<Json> matched;
-
+    //TODO: do we want the actual layout for winter/sesasons, or is id enough?
     for (auto &layout : layouts_data["layouts"].array_items()) {
         if (map_layout_id == json_to_string(layout, "id", true))
             matched.push_back(layout);
@@ -138,6 +138,8 @@ string generate_map_header_text(Json map_data, Json layouts_data) {
 
     text << "\t.2byte " << json_to_string(map_data, "music") << "\n"
          << "\t.2byte " << json_to_string(layout, "id") << "\n"
+         << "\t.2byte " << (map_data["layout_winter"] == Json() ? json_to_string(layout, "id") : json_to_string(map_data, "layout_winter") )<< "\n"
+         << "\t.2byte " << json_to_string(layout, "id") << "\n"//TODO: Doesn't show maps with9out this third id, why?
          << "\t.byte "  << json_to_string(map_data, "region_map_section") << "\n"
          << "\t.byte "  << json_to_string(map_data, "requires_flash") << "\n"
          << "\t.byte "  << json_to_string(map_data, "weather") << "\n"

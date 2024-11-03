@@ -2,6 +2,7 @@
 #define GUARD_TILESETS_H
 
 extern const u32 gTilesetTiles_General[];
+extern const u32 gTilesetTiles_General_Winter[];
 extern const u16 gTilesetPalettes_General[][16];
 
 extern const u32 gTilesetTiles_GenericBuilding1[];

@@ -196,6 +196,8 @@ struct MapHeader
     /* 0x0C */ const struct MapConnections *connections;
     /* 0x10 */ u16 music;
     /* 0x12 */ u16 mapLayoutId;
+    /* 0x12 */ u16 mapLayoutWinterId;
+    /* 0x12 */ u16 mapLayoutWinterId2;//TODO: header.inc seems to break without this extra 2 bytes
     /* 0x14 */ u8 regionMapSectionId;
     /* 0x15 */ u8 cave;
     /* 0x16 */ u8 weather;

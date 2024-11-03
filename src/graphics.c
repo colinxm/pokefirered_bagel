@@ -1258,6 +1258,7 @@ const u16 gTilesetPalettes_General[][16] =
 };
 
 const u32 gTilesetTiles_General[] = INCBIN_U32("data/tilesets/primary/general/tiles.4bpp.lz");
+const u32 gTilesetTiles_General_Winter[] = INCBIN_U32("data/tilesets/primary/general/tiles_winter.4bpp.lz");
 
 const u8 gBerryFixGameboy_Pal[] = INCBIN_U8("graphics/berry_fix/gba_small.gbapal");
 const u8 gBerryFixGameboy_Gfx[] = INCBIN_U8("graphics/berry_fix/gba_small.4bpp.lz");

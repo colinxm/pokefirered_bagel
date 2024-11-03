@@ -42,6 +42,8 @@
 #include "scanline_effect.h"
 #include "script.h"
 #include "script_pokemon_util.h"
+#include "seasons.h"
+#include "constants/seasons_constants.h"
 #include "start_menu.h"
 #include "tileset_anims.h"
 #include "trainer_pokemon_sprites.h"
@@ -545,8 +547,16 @@ struct MapHeader const *const GetDestinationWarpMapHeader(void)
 
 static void LoadCurrentMapData(void)
 {
+    u8 curSeason = getCurSeason();
+
     gMapHeader = *Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
     gSaveBlock1Ptr->mapLayoutId = gMapHeader.mapLayoutId;
+
+    if (curSeason == SEASON_WINTER) { 
+	DebugPrintf("Seson is winter, set layout to layout2");
+	gSaveBlock1Ptr->mapLayoutId = gMapHeader.mapLayoutWinterId;////////are these functions even neccessary, seems weird to reset this, shouldnt map header already have it
+    }
+
     gMapHeader.mapLayout = GetMapLayout();
 }
 
@@ -575,6 +585,7 @@ static void SetPlayerCoordsFromWarp(void)
     }
 }
 
+////////////
 void WarpIntoMap(void)
 {
     ApplyCurrentWarp();
