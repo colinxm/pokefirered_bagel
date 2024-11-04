@@ -34,9 +34,9 @@ const struct Tileset gTileset_PalletTown_Winter =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_PalletTown,
+    .tiles = gTilesetTiles_PalletTown_Winter,///TODO: didn't change this, shoudl I leave it the same?
     .palettes = gTilesetPalettes_PalletTown,
-    .metatiles = gMetatiles_PalletTown,
+    .metatiles = gMetatiles_PalletTown_Winter,
     .metatileAttributes = gMetatileAttributes_PalletTown,
     .callback = NULL,
 };

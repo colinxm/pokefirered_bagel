@@ -1,4 +1,5 @@
 const u32 gTilesetTiles_PalletTown[] = INCBIN_U32("data/tilesets/secondary/pallet_town/tiles.4bpp.lz");
+const u32 gTilesetTiles_PalletTown_Winter[] = INCBIN_U32("data/tilesets/secondary/pallet_town/tiles_winter.4bpp.lz");
 
 const u16 gTilesetPalettes_PalletTown[][16] =
 {

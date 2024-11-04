@@ -741,9 +741,9 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General_Winter",
-      "secondary_tileset": "gTileset_PalletTown",
+      "secondary_tileset": "gTileset_PalletTown_Winter",
       "border_filepath": "data/layouts/PalletTown/border.bin",
-      "blockdata_filepath": "data/layouts/PalletTown/mapWinter.bin"
+      "blockdata_filepath": "data/layouts/PalletTown/map_winter.bin"
     },
     {
       "id": "LAYOUT_VIRIDIAN_CITY",

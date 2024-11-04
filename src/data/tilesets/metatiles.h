@@ -3,8 +3,8 @@ const u16 gMetatiles_General_Winter[] = INCBIN_U16("data/tilesets/primary/genera
 const u32 gMetatileAttributes_General[] = INCBIN_U32("data/tilesets/primary/general/metatile_attributes.bin");
 
 const u16 gMetatiles_PalletTown[] = INCBIN_U16("data/tilesets/secondary/pallet_town/metatiles.bin");
+const u16 gMetatiles_PalletTown_Winter[] = INCBIN_U16("data/tilesets/secondary/pallet_town/metatiles_winter.bin");
 const u32 gMetatileAttributes_PalletTown[] = INCBIN_U32("data/tilesets/secondary/pallet_town/metatile_attributes.bin");
-////////TODO: metatiles but for PalletTown
 
 const u16 gMetatiles_ViridianCity[] = INCBIN_U16("data/tilesets/secondary/viridian_city/metatiles.bin");
 const u32 gMetatileAttributes_ViridianCity[] = INCBIN_U32("data/tilesets/secondary/viridian_city/metatile_attributes.bin");
