@@ -746,6 +746,18 @@
       "blockdata_filepath": "data/layouts/PalletTown/map_winter.bin"
     },
     {
+      "id": "LAYOUT_PALLET_TOWN_SPRING",
+      "name": "PalletTown_Spring_Layout",
+      "width": 24,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General_Spring",
+      "secondary_tileset": "gTileset_PalletTown_Spring",
+      "border_filepath": "data/layouts/PalletTown/border.bin",
+      "blockdata_filepath": "data/layouts/PalletTown/map.bin"
+    },
+    {
       "id": "LAYOUT_VIRIDIAN_CITY",
       "name": "ViridianCity_Layout",
       "width": 48,

@@ -20,6 +20,17 @@ const struct Tileset gTileset_General_Winter =
     .callback = InitTilesetAnim_General,
 };
 
+const struct Tileset gTileset_General_Spring =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General,
+    .palettes = gTilesetPalettes_General,
+    .metatiles = gMetatiles_General_Spring,
+    .metatileAttributes = gMetatileAttributes_General,
+    .callback = InitTilesetAnim_General,
+};
+
 const struct Tileset gTileset_PalletTown =
 {
     .isCompressed = TRUE,
@@ -37,6 +48,16 @@ const struct Tileset gTileset_PalletTown_Winter =
     .tiles = gTilesetTiles_PalletTown_Winter,///TODO: didn't change this, shoudl I leave it the same?
     .palettes = gTilesetPalettes_PalletTown,
     .metatiles = gMetatiles_PalletTown_Winter,
+    .metatileAttributes = gMetatileAttributes_PalletTown,
+    .callback = NULL,
+};
+const struct Tileset gTileset_PalletTown_Spring=
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PalletTown,
+    .palettes = gTilesetPalettes_PalletTown_Spring,
+    .metatiles = gMetatiles_PalletTown_Spring,
     .metatileAttributes = gMetatileAttributes_PalletTown,
     .callback = NULL,
 };

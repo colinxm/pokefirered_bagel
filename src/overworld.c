@@ -553,8 +553,10 @@ static void LoadCurrentMapData(void)
     gSaveBlock1Ptr->mapLayoutId = gMapHeader.mapLayoutId;
 
     if (curSeason == SEASON_WINTER) { 
-	DebugPrintf("Seson is winter, set layout to layout2");
-	gSaveBlock1Ptr->mapLayoutId = gMapHeader.mapLayoutWinterId;////////are these functions even neccessary, seems weird to reset this, shouldnt map header already have it
+	gSaveBlock1Ptr->mapLayoutId = gMapHeader.mapLayoutWinterId;
+    }
+    else if (curSeason == SEASON_SPRING) {
+	gSaveBlock1Ptr->mapLayoutId = gMapHeader.mapLayoutSpringId;
     }
 
     gMapHeader.mapLayout = GetMapLayout();
