@@ -143,7 +143,13 @@ string generate_map_header_text(Json map_data, Json layouts_data) {
         //  << "\t.2byte " << json_to_string(layout, "id") << "\n"//TODO: Doesn't show maps with9out this third id, why?
          << "\t.byte "  << json_to_string(map_data, "region_map_section") << "\n"
          << "\t.byte "  << json_to_string(map_data, "requires_flash") << "\n"
+
          << "\t.byte "  << json_to_string(map_data, "weather") << "\n"
+         << "\t.byte "  << (map_data["weather_winter"] == Json()? json_to_string(map_data, "weather") : json_to_string(map_data, "weather_winter") )<< "\n"
+         << "\t.byte "  << (map_data["weather_spring"] == Json()? json_to_string(map_data, "weather") : json_to_string(map_data, "weather_spring") )<< "\n"
+         << "\t.byte "  << json_to_string(map_data, "weather") << "\n"//Align it
+         << "\t.byte "  << json_to_string(map_data, "weather") << "\n"//Align it
+
          << "\t.byte "  << json_to_string(map_data, "map_type") << "\n";
 
     if (version != "firered")

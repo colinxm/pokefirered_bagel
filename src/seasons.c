@@ -10,6 +10,16 @@ u8 getCurSeason (void) {
 	return curSeason;
 }
 
+u8 getSeasonWeather(const struct MapHeader *const mapHeader) {
+	u8 curSeason = getCurSeason();
+	switch (curSeason) {
+		case SEASON_SUMMER: return mapHeader->weather;
+		case SEASON_FALL: return mapHeader->weather;
+		case SEASON_WINTER: return mapHeader->weatherWinter;
+		case SEASON_SPRING: return mapHeader->weatherSpring;
+	}
+}
+
 static u8 nextSeason (u8 curSeason) {
 	switch (curSeason) {
 		case SEASON_SUMMER: return SEASON_FALL;

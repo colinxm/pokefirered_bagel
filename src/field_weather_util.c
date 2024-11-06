@@ -2,6 +2,8 @@
 #include "field_weather.h"
 #include "overworld.h"
 #include "constants/weather.h"
+#include "constants/seasons_constants.h"////TODO: to maek more consistent, change to constants/seasons.h
+#include "seasons.h"
 
 static u8 TranslateWeatherNum(u8 weather);
 static void UpdateRainCounter(u8 newWeather, u8 oldWeather);
@@ -21,7 +23,8 @@ u8 GetSav1Weather(void)
 void SetSavedWeatherFromCurrMapHeader(void)
 {
     u8 oldWeather = gSaveBlock1Ptr->weather;
-    gSaveBlock1Ptr->weather = TranslateWeatherNum(gMapHeader.weather);
+    u8 seasonWeather = getSeasonWeather(&gMapHeader);
+    gSaveBlock1Ptr->weather = TranslateWeatherNum(seasonWeather);
     UpdateRainCounter(gSaveBlock1Ptr->weather, oldWeather);
 }
 

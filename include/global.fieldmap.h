@@ -201,6 +201,10 @@ struct MapHeader
     /* 0x14 */ u8 regionMapSectionId;
     /* 0x15 */ u8 cave;
     /* 0x16 */ u8 weather;
+    /* 0x16 */ u8 weatherWinter;
+    /* 0x16 */ u8 weatherSpring;
+    /* 0x16 */ u8 weatherUnused;
+    /* 0x16 */ u8 weatherUnused2;
     /* 0x17 */ u8 mapType;
                // fields correspond to the arguments in the map_header_flags macro
     /* 0x18 */ bool8 bikingAllowed;
